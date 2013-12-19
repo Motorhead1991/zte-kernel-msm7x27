@@ -343,7 +343,7 @@ static void Fts_ts_work_func(struct work_struct *work)
 			input_report_abs(ts->input_dev, ABS_MT_WIDTH_MAJOR, ts->finger_data[i].w );
 			input_report_abs(ts->input_dev, ABS_MT_POSITION_X, ts->finger_data[i].x );
 			input_report_abs(ts->input_dev, ABS_MT_POSITION_Y, ts->finger_data[i].y );
-			input_mt_sync(ts->input_dev);
+			//input_mt_sync(ts->input_dev);
 			//printk("finger=%d, z=%d, event_flag=%d, touch_id=%d\n", i, 
 			//ts->finger_data[i].z, ts->finger_data[i].event_flag,ts->finger_data[i].touch_id);
 		}

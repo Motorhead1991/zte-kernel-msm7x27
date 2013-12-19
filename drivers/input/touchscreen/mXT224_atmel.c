@@ -713,7 +713,7 @@ static void release_all_fingers(struct atmel_ts_data*ts)
 			input_report_abs(ts->input_dev, ABS_MT_WIDTH_MAJOR,ts->finger_data[loop_i].w);
 			input_report_abs(ts->input_dev, ABS_MT_POSITION_X,ts->finger_data[loop_i].x);
 			input_report_abs(ts->input_dev, ABS_MT_POSITION_Y,ts->finger_data[loop_i].y);	
-			input_mt_sync(ts->input_dev);	
+			//input_mt_sync(ts->input_dev);	
 		}
 		
 	}
@@ -1439,7 +1439,7 @@ if(!ts->finger_count){
 
 			//pr_err("huangjinyu report touch v-key major= %d ,width major = %d ,x = %d ,y = %d \n",ts->finger_data[0].z,ts->finger_data[0].w,ts->finger_data[0].x,ts->finger_data[0].y);
 
-			input_mt_sync(ts->input_dev);	
+			//input_mt_sync(ts->input_dev);	
 			input_sync(ts->input_dev);
 			}
 }
@@ -1659,7 +1659,7 @@ else{
 					input_report_abs(ts->input_dev, ABS_MT_POSITION_X,ts->finger_data[loop_i].x);
 					input_report_abs(ts->input_dev, ABS_MT_POSITION_Y,ts->finger_data[loop_i].y);	
 					//pr_err("huangjinyu report touch major= %d ,width major = %d ,x = %d ,y = %d \n",ts->finger_data[loop_i].z,ts->finger_data[loop_i].w,ts->finger_data[loop_i].x,ts->finger_data[loop_i].y);
-					input_mt_sync(ts->input_dev);	
+					//input_mt_sync(ts->input_dev);	
 				}break;
 				default:break;
 				}
